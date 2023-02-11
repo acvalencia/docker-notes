@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nodedocker:
+    image: node
+    container_name: nodeapp
+    ports:
+      - 5000:3000
+    build: .
+    command: node server.js
+  db:
+    image: mongo
+    container_name: mymongo
+    ports:
+      - 27017:27017
+
